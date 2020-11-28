@@ -32,11 +32,11 @@ app.post("/",function(req,res){
 
   const jsonData=JSON.stringify(data);
 
-  const url="https://us7.api.mailchimp.com/3.0/lists/b44c064910";
+  const url="https://us7.api.mailchimp.com/3.0/lists/list_id";
 
   const options={
     method:"POST",
-    auth:"Rohan:b617f66d10632d531160565ee66ee3aa-us7"
+    auth:"Rohan:API KEY-us7"
   }
 
   const request = https.request(url,options,function(response){
@@ -62,8 +62,3 @@ app.post('/failure',function(req,res){
 app.listen(process.env.PORT || "3000",function(){
   console.log("Server is running on localhost 3000");
 });
-
-
-// API KEY
-// b617f66d10632d531160565ee66ee3aa-us7
-// List ID b44c064910
